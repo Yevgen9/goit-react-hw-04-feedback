@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 
 import Controls from "./Controls";
@@ -33,13 +32,19 @@ export default function Counter() {
     return total === 0 ? 0 : Math.round((good / total) * 100);
   };
 
-  // useEffect(() => {
-  //     const totalFeedback = countTotalFeedback();
-  //     const positivePercentage = countPositiveFeedback();
-  // })
-
   const totalFeedback = countTotalFeedback();
   const positivePercentage = countPositiveFeedback();
+
+  // const [totalFeedback, setTotalFeedback] = useState(0);
+  // const [positivePercentage, setPositivePercentage] = useState(0);
+
+  // useEffect(() => {
+  //   const total = countTotalFeedback();
+  //   const positive = countPositiveFeedback();
+
+  //   setTotalFeedback(total);
+  //   setPositivePercentage(positive);
+  // });
 
   return (
     <div>
